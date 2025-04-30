@@ -17,9 +17,10 @@ int main(){
     strcpy(s2.name,"vikash");
     strcpy(s2.address,"Mumbai");
 
-    s3.rollno=1;
-    strcpy(s3.name,"Ravi");
-    strcpy(s3.address,"Banglore");
+    // s3.rollno=1;
+    // strcpy(s3.name,"Ravi");
+    // strcpy(s3.address,"Banglore");
+    struct student s3={1,"Ravi","Banglore"}; // Structure variable initialization using compound literal
 
     struct student stu[10]; // Array of structure
     stu[0]=s1; // Copying structure data to array of structure

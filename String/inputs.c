@@ -14,10 +14,16 @@ void main(){
         srt2[i++] = ch; // Store each character in the array
     }
     srt2[i] = '\0'; // Null-terminate the string
-    printf("The second string is: %s\n", srt2);
+    printf("The second string is: %s\n", srt2); 
+    printf("Type cast of null character is: %d\n", (int)ch); // Output null character
 
     char str3[50];
     printf("Enter a string: ");
     scanf("%s", str3); // Use scanf to read a word 
-    printf("The string is: %s", str3);
+    printf("The string is: %s\n", str3);
+
+    char str4[50];
+    printf("Enter a string: ");
+    scanf("%[^\n]", str4); // Use scanf to read a line until newline
+    printf("The string is: %s", str4); // Output string
 }

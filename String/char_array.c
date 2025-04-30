@@ -3,7 +3,7 @@
 void main(){
     char b[]="Hello World"; // String initialization
     printf("%s\n",b); // Output string
-
+    printf("%d\n\n",sizeof(b));// Null charecter is included in the size of string
 
     char str[20];
     printf("Enter a string: ");
@@ -15,12 +15,7 @@ void main(){
     scanf("%s",c); // Input string
     printf("String is: %s\n",c); // Output string
 
-    
-    int x=strcmp(str,c); // Compare two strings
-    if(x==0){ // If strings are equal
-        printf("Strings are equal\n"); // Output
-    }
-    else { // If strings are not equal
-        printf("Strings are not equal\n"); // Output
-    }
+    char ch='\0';
+    int x=(int)ch;
+    printf("Null character is: %d\n",x); // Output null character
 }
