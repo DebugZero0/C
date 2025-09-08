@@ -1,0 +1,66 @@
+# === Compiled source files ===
+*.o
+*.obj
+*.lo
+*.la
+*.slo
+
+# === Executables ===
+*.out
+*.exe
+*.dll
+*.so
+*.dylib
+
+# === Debug & profiling files ===
+*.dSYM/
+*.stackdump
+*.core
+*.pdb
+*.idb
+
+# === CMake build files ===
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+CTestTestfile.cmake
+Testing/
+_build/
+build/
+
+# === Autotools ===
+/autom4te.cache
+/aclocal.m4
+/compile
+/config.guess
+/config.log
+/config.status
+/config.sub
+/configure
+/depcomp
+/install-sh
+/libtool
+/ltmain.sh
+/missing
+/stamp-h1
+
+# === IDE specific ===
+# VS Code
+.vscode/
+*.code-workspace
+.history/
+# CLion / JetBrains
+.idea/
+
+# === OS specific ===
+# macOS
+.DS_Store
+# Windows
+Thumbs.db
+
+# === Temp / Backup ===
+*.tmp
+*.swp
+*~
