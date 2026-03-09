@@ -18,21 +18,21 @@ void createList(int n) {
         return;
     }
 
-    head = (Node*)malloc(sizeof(Node));
-    printf("Enter data for node 1: ");
-    scanf("%d", &data);
-    head->data = data;
-    head->next = head;
-    temp = head;
-
-    for (i = 2; i <= n; i++) {
-        newNode = (Node*)malloc(sizeof(Node));
+    for (i = 1; i <= n; i++) {
+        newNode = malloc(sizeof(Node));
         printf("Enter data for node %d: ", i);
         scanf("%d", &data);
         newNode->data = data;
-        newNode->next = head;
-        temp->next = newNode;
-        temp = newNode;
+
+        if (head == NULL) {
+            head = newNode;
+            newNode->next = head;
+            temp = head;
+        } else {
+            temp->next = newNode;
+            newNode->next = head;
+            temp = newNode;
+        }
     }
 }
 
@@ -55,7 +55,7 @@ void displayList() {
 // Insert at beginning
 void insertAtBeginning(int data) {
     Node *newNode, *last;
-    newNode = (Node*)malloc(sizeof(Node));
+    newNode = malloc(sizeof(Node));
     newNode->data = data;
 
     if (head == NULL) {
@@ -75,7 +75,7 @@ void insertAtBeginning(int data) {
 // Insert at end
 void insertAtEnd(int data) {
     Node *newNode, *last;
-    newNode = (Node*)malloc(sizeof(Node));
+    newNode = malloc(sizeof(Node));
     newNode->data = data;
 
     if (head == NULL) {
@@ -116,7 +116,7 @@ void insertAtPosition(int data, int pos) {
         return;
     }
 
-    newNode = (Node*)malloc(sizeof(Node));
+    newNode = malloc(sizeof(Node));
     newNode->data = data;
     newNode->next = temp->next;
     temp->next = newNode;
@@ -134,11 +134,7 @@ int main() {
 
     while (1) {
         printf("\n--- MENU ---\n");
-        printf("1. Display List\n");
-        printf("2. Insert at Beginning\n");
-        printf("3. Insert at End\n");
-        printf("4. Insert at Position\n");
-        printf("5. Exit\n");
+        printf("1. Display List\n2. Insert at Beginning\n3. Insert at End\n4. Insert at Position\n5. Exit\n");
         printf("Enter choice: ");
         scanf("%d", &choice);
 
@@ -172,3 +168,7 @@ int main() {
 
     return 0;
 }
+/*
+    Circular Linked list means the last node points to the head node instead of NULL.
+    If there is only one node, it points to itself.
+*/

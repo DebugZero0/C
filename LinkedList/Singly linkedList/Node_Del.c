@@ -107,3 +107,4 @@ int main() {
 
     return 0;
 }
+// Free the deleted nodes to avoid memory leaks.

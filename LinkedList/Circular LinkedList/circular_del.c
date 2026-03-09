@@ -18,21 +18,20 @@ void createList(int n) {
         return;
     }
 
-    head = (Node*)malloc(sizeof(Node));
-    printf("Enter data for node 1: ");
-    scanf("%d", &data);
-    head->data = data;
-    head->next = head;  // circular
-    temp = head;
-
-    for (i = 2; i <= n; i++) {
+    for (i = 1; i <= n; i++) {
         newNode = (Node*)malloc(sizeof(Node));
         printf("Enter data for node %d: ", i);
         scanf("%d", &data);
         newNode->data = data;
-        newNode->next = head;  // last node points to head
-        temp->next = newNode;
-        temp = newNode;
+        if (head == NULL) {
+            head = newNode;
+            head->next = head;  // circular
+            temp = head;
+        } else {
+            newNode->next = head;  // last node points to head
+            temp->next = newNode;
+            temp = newNode;
+        }
     }
 }
 
