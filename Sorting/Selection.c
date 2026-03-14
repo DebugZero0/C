@@ -27,3 +27,11 @@ int main(){
     }
     return 0;
 }
+
+/*
+    Best case: O(n^2) - when the array is already sorted
+    Avg case: O(n^2) - on average, insertion sort performs poorly with random input
+    Worst case: O(n^2) - when the array is sorted in reverse order
+
+    NOT STABLE SORTING ALGORITHM
+*/
