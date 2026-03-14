@@ -105,4 +105,7 @@ int main(){
     Limited to 3 elements and does not reuse space after dequeuing, which can lead to inefficient use of the queue. -> To fix this, we can implement a circular queue.
 
     For simple que front = 0 and rear = -1 
+    Enqueue : que[++rear] = ele
+    Dequeue : ele = que[front++]
+    
 */

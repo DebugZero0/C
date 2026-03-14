@@ -90,4 +90,15 @@ int main() {
     circular queue handles space more efficiently than a linear queue by reusing the empty spaces created by dequeued elements.
     This is done by using the modulo operator to wrap around the rear and front indices when they reach the end of the array.
     Front = -1 and Rear = -1 indicates an empty queue. When the first element is enqueued, both front and rear are set to 0.
+
+    Enqueue : 
+        if((rear + 1) % SIZE == front) {
+            printf("Queue is Full!\n");
+            return;
+        }
+        rear = (rear + 1) % SIZE;
+        queue[rear] = value;
+    Dequeue :
+        if(front == rear) front = rear = -1; 
+        else front = (front + 1) % SIZE;
 */
