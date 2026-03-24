@@ -3,7 +3,7 @@
 
 #define MAX 3
 
-int front = 0, rear = -1;
+int front = -1, rear = -1;
 int queue[MAX];
 
 void enqueue(int ele){
@@ -26,7 +26,7 @@ int dequeue(){
 
         // Optional reset when queue becomes empty
         if(front > rear){
-            front = 0;
+            front = -1;
             rear = -1;
         }
 

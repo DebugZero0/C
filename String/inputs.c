@@ -19,11 +19,16 @@ void main(){
 
     char str3[50];
     printf("Enter a string: ");
-    scanf("%s", str3); // Use scanf to read a word 
+    scanf("%s", str3); // Use scanf to read a word from user input
     printf("The string is: %s\n", str3);
 
     char str4[50];
     printf("Enter a string: ");
-    scanf("%[^\n]", str4); // Use scanf to read a line until newline
+    scanf("%[^\n]s", str4); // Use scanf to read a line until newline
     printf("The string is: %s", str4); // Output string
+
+    char str5[50];
+    printf("Enter a string: "); 
+    gets(str5); // Use gets to read a string (not recommended)
+    puts(str5); // Output string 
 }
