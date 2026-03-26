@@ -56,11 +56,13 @@ void display() {
     }
 
     printf("Queue elements: ");
-    for(int i = front; ; i = (i + 1) % SIZE) {
+    int i = front;
+    while (1) {
         printf("%d ", queue[i]);
         if (i == rear)
             break;
-    }
+        i = (i + 1) % SIZE;
+    }    
     printf("\n");
 }
 
@@ -101,4 +103,12 @@ int main() {
     Dequeue :
         if(front == rear) front = rear = -1; 
         else front = (front + 1) % SIZE;
+    display :
+        int i = front;
+        while (1) {
+            printf("%d ", queue[i]);
+            if (i == rear)
+                break;
+            i = (i + 1) % SIZE;
+        }
 */
